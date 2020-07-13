@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Tiles/Ground_Tile_01_B.png" type="Texture" id=1]
+
+[node name="Menu" type="Node"]
+
+[node name="Ground_Tile_01_B" type="Sprite" parent="."]
+position = Vector2( 511.553, 337.632 )
+scale = Vector2( 4.29911, 3.54741 )
+texture = ExtResource( 1 )

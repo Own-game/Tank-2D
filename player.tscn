@@ -1,0 +1,163 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Gun_01.png" type="Texture" id=1]
+[ext_resource path="res://Track_1_A.png" type="Texture" id=2]
+[ext_resource path="res://player.gd" type="Script" id=3]
+[ext_resource path="res://Hull_01.png" type="Texture" id=4]
+[ext_resource path="res://Gun_01.gd" type="Script" id=5]
+[ext_resource path="res://Tiles/Sprites/Sprite_Fire_Shots_Impact_A_001.png" type="Texture" id=6]
+[ext_resource path="res://Tiles/Sprites/Sprite_Fire_Shots_Impact_A_000.png" type="Texture" id=7]
+[ext_resource path="res://Tiles/Sprites/Sprite_Fire_Shots_Impact_A_003.png" type="Texture" id=8]
+[ext_resource path="res://Tiles/Sprites/Sprite_Fire_Shots_Impact_A_002.png" type="Texture" id=9]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="Animation" id=1]
+resource_name = "drive"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Hull_01/Track_1_A:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Rect2( 0, 0, 41.947, 200 ), Rect2( 0, 41.01, 41.947, 200 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Hull_01/Track_1_A/Track_1_A2:region_rect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Rect2( 0, 0, 41.947, 200 ), Rect2( 0, 41.01, 41.947, 200 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "shoot"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Gun_01:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -49.2058, 3.84302 ), Vector2( -48.2057, 31.8179 ), Vector2( -44.7649, 0.959717 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Gun_01:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 97.8827, 123.752 )
+
+[node name="player" type="Area2D"]
+position = Vector2( 3.7633, -3.22131 )
+scale = Vector2( 0.25, 0.25 )
+script = ExtResource( 3 )
+
+[node name="Hull_01" type="Sprite" parent="."]
+position = Vector2( 2.16232, -3.44941 )
+rotation = 1.5708
+texture = ExtResource( 4 )
+
+[node name="Track_1_A" type="Sprite" parent="Hull_01"]
+position = Vector2( -78.46, 2.61098 )
+scale = Vector2( 1, 1.1741 )
+z_index = -1
+texture = ExtResource( 2 )
+normal_map = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 34.7223, 41.947, 200 )
+region_filter_clip = true
+
+[node name="ColorRect" type="ColorRect" parent="Hull_01/Track_1_A"]
+show_behind_parent = true
+light_mask = 0
+anchor_top = -0.023
+anchor_right = 1.329
+anchor_bottom = 1.022
+margin_left = -21.0
+margin_top = -98.4
+margin_right = -24.489
+margin_bottom = -101.4
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Hull_01/Track_1_A"]
+show_behind_parent = true
+light_mask = 0
+anchor_top = -0.023
+anchor_right = 1.329
+anchor_bottom = 1.022
+margin_left = 125.867
+margin_top = -97.3871
+margin_right = 122.378
+margin_bottom = -100.387
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Track_1_A2" type="Sprite" parent="Hull_01/Track_1_A"]
+position = Vector2( 161.023, 0.56723 )
+scale = Vector2( 0.743154, 0.999847 )
+texture = ExtResource( 2 )
+normal_map = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 34.7223, 41.947, 200 )
+region_filter_clip = true
+
+[node name="Gun_01" type="Sprite" parent="."]
+position = Vector2( -48.2057, 31.8179 )
+texture = ExtResource( 1 )
+offset = Vector2( -1.94717, -59.3326 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Gun_01"]
+position = Vector2( -4.28674, -185.72 )
+frames = SubResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/drive = SubResource( 1 )
+anims/shoot = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -1.6949, -4.51687 )
+rotation = 1.5708
+shape = SubResource( 3 )
+[connection signal="body_entered" from="." to="." method="_on_player_body_entered"]
+[connection signal="animation_finished" from="Gun_01/AnimatedSprite" to="Gun_01" method="_on_AnimatedSprite_animation_finished"]
