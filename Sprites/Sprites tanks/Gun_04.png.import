@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Gun_04.png-5bca5052388d96b7d6e9c7aaec27877e.stex"
+path="res://.import/Gun_04.png-a1c93992ef1e749683971c5c904071b0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tiles/Gun_04.png"
-dest_files=[ "res://.import/Gun_04.png-5bca5052388d96b7d6e9c7aaec27877e.stex" ]
+source_file="res://Sprites/Sprites tanks/Gun_04.png"
+dest_files=[ "res://.import/Gun_04.png-a1c93992ef1e749683971c5c904071b0.stex" ]
 
 [params]
 

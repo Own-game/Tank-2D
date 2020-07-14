@@ -1,16 +1,16 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Gun_01.png" type="Texture" id=1]
-[ext_resource path="res://Track_1_A.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Sprites tanks/Gun_01.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Sprites tanks/Track_1_A.png" type="Texture" id=2]
 [ext_resource path="res://player.gd" type="Script" id=3]
-[ext_resource path="res://Hull_01.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Sprites tanks/Hull_01.png" type="Texture" id=4]
 [ext_resource path="res://Gun_01.gd" type="Script" id=5]
-[ext_resource path="res://Tiles/Sprites/Sprite_Fire_Shots_Impact_A_001.png" type="Texture" id=6]
-[ext_resource path="res://Tiles/Sprites/Sprite_Fire_Shots_Impact_A_000.png" type="Texture" id=7]
-[ext_resource path="res://Tiles/Sprites/Sprite_Fire_Shots_Impact_A_003.png" type="Texture" id=8]
-[ext_resource path="res://Tiles/Sprites/Sprite_Fire_Shots_Impact_A_002.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Sprites shoots/Sprite_Fire_Shots_Impact_A_001.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Sprites shoots/Sprite_Fire_Shots_Impact_A_000.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Sprites shoots/Sprite_Fire_Shots_Impact_A_003.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Sprites shoots/Sprite_Fire_Shots_Impact_A_002.png" type="Texture" id=9]
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 7 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 8 ) ],
 "loop": true,
@@ -18,8 +18,7 @@ animations = [ {
 "speed": 12.0
 } ]
 
-[sub_resource type="Animation" id=1]
-resource_name = "drive"
+[sub_resource type="Animation" id=2]
 length = 0.5
 loop = true
 tracks/0/type = "value"
@@ -47,8 +46,7 @@ tracks/1/keys = {
 "values": [ Rect2( 0, 0, 41.947, 200 ), Rect2( 0, 41.01, 41.947, 200 ) ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "shoot"
+[sub_resource type="Animation" id=3]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Gun_01:position")
@@ -75,7 +73,7 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 97.8827, 123.752 )
 
 [node name="player" type="Area2D"]
@@ -148,16 +146,16 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Gun_01"]
 position = Vector2( -4.28674, -185.72 )
-frames = SubResource( 4 )
+frames = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/drive = SubResource( 1 )
-anims/shoot = SubResource( 2 )
+anims/drive = SubResource( 2 )
+anims/shoot = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 position = Vector2( -1.6949, -4.51687 )
 rotation = 1.5708
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 [connection signal="body_entered" from="." to="." method="_on_player_body_entered"]
 [connection signal="animation_finished" from="Gun_01/AnimatedSprite" to="Gun_01" method="_on_AnimatedSprite_animation_finished"]

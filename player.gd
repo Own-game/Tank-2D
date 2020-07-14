@@ -8,8 +8,7 @@ var screen_size
 
 func _ready():
 	screen_size = get_viewport_rect().size
-	get_tree().change_scene("res://Main.tscn")
-	
+		
 func _process(delta):
 	var velocity = Vector2()
 	if Input.is_action_pressed("ui_left"):

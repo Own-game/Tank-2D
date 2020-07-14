@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Track_3_B.png-80782e2e92b2335139a4a5a6b6857743.stex"
+path="res://.import/Track_3_B.png-8e3a011f4b8fa480d591ed9df160edbf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tiles/Track_3_B.png"
-dest_files=[ "res://.import/Track_3_B.png-80782e2e92b2335139a4a5a6b6857743.stex" ]
+source_file="res://Sprites/Sprites tanks/Track_3_B.png"
+dest_files=[ "res://.import/Track_3_B.png-8e3a011f4b8fa480d591ed9df160edbf.stex" ]
 
 [params]
 

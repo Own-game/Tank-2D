@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Sprite_Fire_Shots_Impact_A_003.png-7ca535fd6241a29b62f5ec2225dc0c7e.stex"
+path="res://.import/Sprite_Fire_Shots_Impact_A_003.png-9a409f4efa60385540aa03ec680910d9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tiles/Sprites/Sprite_Fire_Shots_Impact_A_003.png"
-dest_files=[ "res://.import/Sprite_Fire_Shots_Impact_A_003.png-7ca535fd6241a29b62f5ec2225dc0c7e.stex" ]
+source_file="res://Sprites/Sprites shoots/Sprite_Fire_Shots_Impact_A_003.png"
+dest_files=[ "res://.import/Sprite_Fire_Shots_Impact_A_003.png-9a409f4efa60385540aa03ec680910d9.stex" ]
 
 [params]
 
