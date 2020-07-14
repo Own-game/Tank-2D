@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Light_Shell.png-3a808cb57e9a048aa4308f356c7bcf94.stex"
+path="res://.import/Light_Shell.png-5b7fc637e546d0f8c9d3b2a93d8513d0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Light_Shell.png"
-dest_files=[ "res://.import/Light_Shell.png-3a808cb57e9a048aa4308f356c7bcf94.stex" ]
+source_file="res://Sprites/Light_Shell.png"
+dest_files=[ "res://.import/Light_Shell.png-5b7fc637e546d0f8c9d3b2a93d8513d0.stex" ]
 
 [params]
 
