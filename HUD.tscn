@@ -7,7 +7,7 @@
 size = 64
 font_data = ExtResource( 1 )
 
-[sub_resource type="CanvasItemMaterial" id=3]
+[sub_resource type="CanvasItemMaterial" id=2]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -38,7 +38,7 @@ __meta__ = {
 }
 
 [node name="StartButton" type="Button" parent="."]
-material = SubResource( 3 )
+material = SubResource( 2 )
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5

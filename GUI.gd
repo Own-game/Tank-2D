@@ -8,7 +8,6 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_tree().change_scene("res://Menu.tscn")
 	$new_game.connect("pressed", self, "btn_new_game")
 	$continue.connect("pressed", self, "btn_continue")
 	$exit.connect("pressed", self, "btn_exit")

@@ -4,6 +4,7 @@
 [ext_resource path="res://GUI.gd" type="Script" id=2]
 
 [node name="Menu" type="Node"]
+process_priority = 1
 
 [node name="Ground_Tile_01_B" type="Sprite" parent="."]
 position = Vector2( 511.553, 337.632 )
@@ -25,23 +26,23 @@ __meta__ = {
 }
 
 [node name="continue" type="LinkButton" parent="GUI"]
-margin_left = 402.688
+margin_left = 415.402
 margin_top = 369.907
-margin_right = 472.688
+margin_right = 485.402
 margin_bottom = 383.907
 rect_scale = Vector2( 3, 3 )
-text = "New Game"
+text = "Continue"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="exit" type="LinkButton" parent="GUI"]
-margin_left = 402.688
-margin_top = 441.951
-margin_right = 472.688
-margin_bottom = 455.951
+margin_left = 455.661
+margin_top = 440.892
+margin_right = 525.661
+margin_bottom = 454.892
 rect_scale = Vector2( 3, 3 )
-text = "New Game"
+text = "Exit"
 __meta__ = {
 "_edit_use_anchors_": false
 }
