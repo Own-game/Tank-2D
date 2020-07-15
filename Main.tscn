@@ -7,7 +7,7 @@
 
 [node name="Main" type="Node"]
 
-[node name="Sprite" parent="." instance=ExtResource( 2 )]
+[node name="Background" parent="." instance=ExtResource( 2 )]
 
 [node name="player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 175.306, 113.663 )
@@ -17,6 +17,10 @@ z_index = 1
 scale = Vector2( 0.5, 0.5 )
 current = true
 zoom = Vector2( 0.5, 0.5 )
+limit_left = 0
+limit_top = 0
+smoothing_enabled = true
+editor_draw_limits = true
 
 [node name="Tank bot" parent="." instance=ExtResource( 3 )]
 position = Vector2( 373.823, 180.937 )
