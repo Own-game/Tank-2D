@@ -15,6 +15,7 @@ func _ready():
 
 func btn_new_game():
 	get_tree().change_scene("res://Main.tscn")
+	
 func btn_continue():
 	pass
 func btn_exit():

@@ -1,12 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Sprites/Sprites tanks/Hull_04.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Sprites tanks/Gun_04.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Sprites tanks/Track_3_B.png" type="Texture" id=3]
 [ext_resource path="res://Gun_04.gd" type="Script" id=4]
-
-
-
+[ext_resource path="res://Tank_bot.gd" type="Script" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "drive"
@@ -37,11 +35,14 @@ tracks/1/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 73.7055, 98.2906 )
+extents = Vector2( 74.1713, 99.5669 )
 
 [node name="Tank bot" type="Area2D"]
 position = Vector2( -0.707092, 0 )
 scale = Vector2( 0.25, 0.25 )
+z_index = 1
+collision_mask = 0
+script = ExtResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 26.3778, 5.61232 )
